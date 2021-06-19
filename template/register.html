@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if flag %}
+    <title>Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/register.css' %}">
+</head>
+<body>
+
+<div class="main">
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="form" method="POST" action="/Evoting_app/register">  {% csrf_token %}
+                <h1>Voter Registration <br>मतदाता पंजीकरण <br></h1>
+                <input type="text" id="name" name="name" placeholder="Name / नाम" pattern="[a-zA-Z ]{2,20}" title="Name should not contain any digits." required/>
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile / मोबाइल" pattern="[0-9]{10}" title="Mobile number should exactly be 10 digits." required/>
+                <input type="text" name="district" id="state" placeholder="District / जिला" pattern="[a-zA-Z ]{2,25}" required>
+                <input type="date" id="date" name="date" min="1900-01-01" max="2004-04-08" required>
+                <select id="sex" name="sex" required>
+                    <option value="Male">Male / पुरुष</option>
+                    <option value="Female">Female / महिला</option>
+                    <option value="Others">Transgender / ट्रांसजेंडर</option>
+                </select>
+                <input type="test" name="aadharnum" placeholder="Enter Your Aadhar / अपने आधार दर्ज करें" pattern="[0-9]{12}">
+                <button type="submit">Sign Up / साइन अप करें</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <img src='{% static "/img/ashok-stambh.png" %}' alt="Election Commission">
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <img src='{% static "/img/ashok-stambh.png" %}' alt="Election Commission">
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Welcome / स्वागत हे</h1>
+                    <p>Enter your personal details to register yourself as a voter.<br><br> मतदाता के रूप में खुद को पंजीकृत करने के लिए अपना व्यक्तिगत विवरण दर्ज करें।</p>
+                    <button class="ghost" id="signUp">Sign Up / साइन अप करें</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <p>E-Voting with Aadhar Verification &copy 2021 / आधार सत्यापन के साथ ई-वोटिंग © 2021</p>
+    </footer>
+    {% load static %}
+    <script src='{% static "/js/register.js" %}'></script>
+{% else %}
+<script>document.location="/Evoting_app/officerlogin" </script>
+{% endif %}
+</body>
+</html>

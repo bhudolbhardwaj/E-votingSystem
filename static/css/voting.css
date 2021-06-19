@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(../img/greek-vase.png);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 95vh;
+	margin-top: -20px;
+}
+
+.heading{
+	width: 100%;
+}
+.heading button{
+	position: relative;
+	float: right;
+}
+.container {
+	background-image: url(../img/greek-vase.png);
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 1100px;
+	max-width: 100%;
+	min-height: 600px;
+}
+
+.image,.aadhar>form{
+	display: flex;
+	justify-content: center;
+}
+
+.image img{
+	margin: 30px 0;
+	width: 22%;
+}
+
+.aadhar>form>button{
+	margin: 15px 0;
+	width: 45%;
+	font-size: 15px;
+}
+
+.voter_name{
+	background-color: #FF9933;
+}
+.voter_name h1{
+	text-align: center;
+	padding: 1%;
+}
+
+.candidate{
+	display: flex;
+	flex-direction: column;
+}
+
+.candidate>div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(212, 212, 212);
+	margin: 10px 0;
+}
+
+h1{
+	font-weight: bold;
+	margin: 0;
+    margin-bottom: 10px;
+}
+
+h2{
+	color: #000080;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #138808;
+	background-color: #000080;
+	color: #FF9933;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+.candidate .items>button{
+	color: #fff;
+	background-color: #138808;
+	margin-bottom: 10px;
+}
+
+/* Footer CSS */
+
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}

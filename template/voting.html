@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting page</title>
+    <link rel="stylesheet" href='{% static "css/voting.css" %}'>
+    {% if flag %}
+</head>
+<body>
+    <div class="heading" hidden><button class="logout">Logout</button></div>
+    <div class="container" id="container">
+        <div class="voter_name">
+            <h1>Hi! {{cname|upper}}</h1>
+        </div>
+        <form method="POST" id="voted" action="/Evoting_app/voting" > {% csrf_token %}
+            <div class="candidate">
+                {% for i in candidate %}
+                <div class="items">
+                    <img src="/static/img/{{i.party_name|lower}}.png" alt="{{i.party_name}}" width="80px">
+                    <h2>{{i.name}}</h2>
+                    <h3>{{i.party_name}}</h3>
+                    <h3>{{i.district}}</h3>
+                    <button id="{{i.name}}" class="vote" name="name" value="{{i.name}}" onclick="voteat(this.id)">VOTE / मतदान</button>
+                </div>
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>E-Voting with Aadhar Verification &copy 2021 / आधार सत्यापन के साथ ई-वोटिंग © 2021</p>
+    </footer>
+    <script>
+    function voteat(name){
+        alert("You Voted : "+name)
+        document.querySelector('#voted').submit();
+    }
+    </script>
+{% else %}
+<center><h1>You are not registered user.</h1></center>
+{% endif %}
+</body>
+
+</html>

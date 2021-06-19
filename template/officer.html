@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer Login</title>
+    <link rel="stylesheet" href='{% static "/css/register.css" %}'>
+</head>
+<body>
+    <div class="container" id=container>
+        <div class="login-container">
+            <form method="POST" > {% csrf_token %}
+                <img src='{% static "img/ashok-stambh.png" %}' width="120px" alt="">
+                <h1 class="ofc">Officer Login / अधिकारी लॉगिन</h1>
+                <input name="usn" type="text" placeholder="Username / उपयोगकर्ता नाम" pattern="[a-zA-Z0-9_]{2,20}" title="Must not contain Space and should be minimum 2 characters" required/>
+                <input name="pwd" type="password" placeholder="Password / पारण शब्द" pattern="[a-zA-Z0-9_@#$!%*]{8,}$" title="Must Contain 
+                Minimum eight characters, at least one letter and one number" name="password" id="password">
+                <button type="submit">Login / लॉग इन करें</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>E-Voting with Aadhar Verification &copy 2021 / आधार सत्यापन के साथ ई-वोटिंग © 2021</p>
+    </footer>
+</body>
+</html>

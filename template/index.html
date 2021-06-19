@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
+    <script src="https://kit.fontawesome.com/0874adc7ac.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="adm">
+            <a href="/admin"><i class="fas fa-user-lock"></i>Admin / व्यवस्थापक</a>
+        </div>
+
+        <div class="ashok">
+            {% load static %}
+            <img width=83% src="{% static '/img/ashoka.png' %}">
+        </div>   
+
+        <div class="btns">
+            <a href="./voterlogin">Voter / मतदाता</a>
+            <a href="./officerlogin">Officer / अफ़सर</a>
+        </div>    
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  </body>
+</html>

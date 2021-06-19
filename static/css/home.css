@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+/*
+#FF9933 
+#000080
+#138808
+ */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../img/greek-vase.png");
+}
+.adm{
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+a{
+    text-decoration: none;
+    background-color: #000080;
+    color: #FF9933 ;
+    padding: 0.4em 1.6em;
+    border-radius: 30px;
+    font-size: larger;
+    font-family: "poppins", sans-serif;
+}
+a>i{
+    margin-right: 6px;
+}
+.ashok{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img{
+    margin-left: 40px;
+}
+.btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btns a{
+    width: 250px;
+    text-align: center;
+    font-size: larger;
+    font-family: "Poppins", sans-serif;
+    margin-left: 5px;
+    margin-right: 110px;;
+}

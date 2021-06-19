@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/voting.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src='{% static "/img/ashok-stambh.png" %}' alt="INDIA">
+        </div>
+        <div class="aadhar">
+            <form action="/Evoting_app/voterlogin" method="POST" id="scanform"> {% csrf_token %}
+                <span name="scancard" hidden>rrr</span>
+                <button type="submit">Scan Your Aadhar / अपने आधार को स्कैन करें </button>
+            </form>   
+        </div>
+    </div>
+    <footer>
+        <p>E-Voting with Aadhar Verification &copy 2021 / आधार सत्यापन के साथ ई-वोटिंग © 2021</p>
+    </footer>
+</body>
+</html>

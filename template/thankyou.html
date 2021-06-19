@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer Login</title>
+    <link rel="stylesheet" href='{% static "/css/register.css" %}'>
+</head>
+<body>
+    <div class="container" id=container style="display: flex; align-items: center; flex-direction: column;">
+            <img src="../static/img/ashok-stambh.png" alt="INDIA" width="25%" style="display: flex; margin: 30px;">
+            <h1 style="color:#138808">Thank You for Voting !</h1>
+            <h1 style="color:#138808">मतदान के लिए धन्यवाद !</h1>
+    </div>
+
+    <footer>
+        <p>E-Voting with Aadhar Verification &copy 2021 / आधार सत्यापन के साथ ई-वोटिंग © 2021</p>
+    </footer>
+</body>
+<script type="text/javascript">   
+    function Redirect() 
+    {  
+        window.location="voterlogin"; 
+    }
+    setTimeout('Redirect()', 2000);   
+</script>
+</html>

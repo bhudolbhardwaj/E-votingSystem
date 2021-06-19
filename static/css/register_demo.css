@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../img/greek-vase.png");
+}
+.container {
+    width: 100%;
+    display: flex;
+    margin-top: 2%;
+}
+.left-block{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    align-items: center;
+    margin: 2%;
+}
+.left-block img, h1, button{
+    margin-bottom: 5%;
+}
+.left-block > button{
+    width: 150px;
+    text-align: center;
+    font-size: larger;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    background-color: #000080;
+    color: #FF9933 ;
+    padding: 0.4em 1.6em;
+    border-radius: 30px;
+}
+.left-block>h1{
+    color:#FF9933;
+}
+.right-block{
+    width: 65%;
+    background-color: darkgoldenrod;
+    margin: auto;
+    margin: 1%;
+}
+.registration{
+    background-color: blue;
+    display: block;
+    margin: 5%;
+}
+
+
+
+
+
+
